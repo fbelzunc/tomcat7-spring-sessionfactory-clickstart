@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Application context definition for the application.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/jee
+         http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <beans profile="javaee">
+        <!-- JNDI DataSource for JEE environments -->
+        <!-- use relative jndi-name + resource-ref=true for https://jira.springsource.org/browse/SPR-4585 -->
+        <jee:jndi-lookup id="dataSource" jndi-name="jdbc/mydb" resource-ref="true"/>
+    </beans>
+</beans>
