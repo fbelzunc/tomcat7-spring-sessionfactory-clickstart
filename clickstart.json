@@ -1,0 +1,29 @@
+{
+    "id": "tomcat7-spring-hibernate-sessionfactory-clickstart",
+    "name": "Tomcat 7 Spring Hibernate SessionFactory ClickStart",
+    "source": "git://github.com/fbelzunc/tomcat7-spring-sessionfactory-clickstart.git",
+    "description" : "Deploy your WebSocket application on Tomcat 7",
+    "doc-url" : "https://github.com/fbelzunc/tomcat7-spring-sessionfactory-clickstart/blob/master/README.md",
+    "icon" : "https://raw.github.com/CloudBees-community/tomcat7-spring-sessionfactory-clickstart/master/icon.png",
+
+    "supported-by" : "cloudbees",
+    "order" : 100,
+
+    "runtime": {
+        "type": "tomcat7",
+        "app-parameters" : {
+            "http_version" : "1.1"
+        }
+    },
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "mydb"
+        }
+    ],
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven"
+        }
+    }
+}

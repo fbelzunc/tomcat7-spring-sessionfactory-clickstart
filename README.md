@@ -97,31 +97,18 @@ To enable this profile on your development environment you have to add this opti
 ```xml
 -Dspring.profiles.active=javaee
 ```
-# Configure JPA and Hibernate in your application
+# Configure Session Factory in your application
 
-#### Declare Hibernate and JPA jars in your Maven pom.xml
+#### Declare Hibernate in your Maven pom.xml
 
 ```xml
-<project ...>
-    <dependencies>
-        <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
-            <version>1.0.2</version>
-        </dependency>
+       <!-- Hibernate -->
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>4.2.4.Final</version>
         </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.2.4.Final</version>
-        </dependency>
-        ...
-    </dependencies>
-</dependencies>
 ```
 
 ### Using Placeholder to inject the showSql and the generateDdl value from a configuration file
