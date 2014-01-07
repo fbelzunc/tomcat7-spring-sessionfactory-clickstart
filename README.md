@@ -38,7 +38,7 @@ bees db:create product-db
 ### Bind Tomcat container to database
 
 ```sh
-bees app:bind -a product -db product-db -as product
+bees app:bind -a product -db product-db -as mydb
 ```
 
 ### Activate Spring Profiles on CloudBees platform
